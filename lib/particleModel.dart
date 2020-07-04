@@ -22,9 +22,9 @@ class ParticleModel {
     final startPosition =
         Offset(/* -0.2 + 1.4 * random.nextDouble() */ 0.5, 1.2);
     final endPosition = Offset(
-        /* -0.2 + 1.4 * random.nextDouble() */ -0.2 +
+        /* -0.2 + 1.4 * random.nextDouble() */ -0.4 +
             (1 - width) +
-            (1.4 - 2 * (1 - width)) * random.nextDouble(),
+            (1.4 + 0.4 - 2 * (1 - width)) * random.nextDouble(),
         1 - height);
     final duration = Duration(milliseconds: 500 + random.nextInt(1000));
 

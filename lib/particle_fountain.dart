@@ -24,15 +24,21 @@ class _ParticlesState extends State<Particles> {
 
   @override
   void initState() {
+    generate();
+    super.initState();
+  }
+
+  void generate() {
+    particles.clear();
     List.generate(widget.numberOfParticles, (index) {
       particles.add(ParticleModel(random, widget.height, widget.width));
     });
-    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    print(this.particles.length);
+    generate();
+    // print(widget.height);
     // ignore: deprecated_member_use
     return Rendering(
       builder: (context, time) {

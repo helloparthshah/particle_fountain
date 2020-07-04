@@ -30,11 +30,29 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  double h = 1;
   @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.red,
-      child: Particles(30, 0.6 /* , 0.2 */),
+      child: Stack(
+        children: [
+          Container(
+            constraints: BoxConstraints.expand(),
+            child: Particles(30, h /* , 0.2 */),
+          ),
+          Slider(
+            min: 0,
+            max: 1,
+            value: h,
+            onChanged: (height) {
+              setState(() {
+                h = height;
+              });
+            },
+          ),
+        ],
+      ),
     );
   }
 }
