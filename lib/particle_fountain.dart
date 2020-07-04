@@ -35,9 +35,15 @@ class _ParticlesState extends State<Particles> {
     });
   }
 
+  void update() {
+    for (int i = 0; i < widget.numberOfParticles; i++) {
+      particles[i].changeHW(widget.height, widget.width);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    generate();
+    update();
     // print(widget.height);
     // ignore: deprecated_member_use
     return Rendering(

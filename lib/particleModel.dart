@@ -44,6 +44,11 @@ class ParticleModel {
     size = 0.2 + random.nextDouble() * 0.4;
   }
 
+  changeHW(double h, double w) {
+    height = h;
+    width = w;
+  }
+
   maintainRestart(Duration time) {
     if (animationProgress.progress(time) == 1.0) {
       restart(time: time);
