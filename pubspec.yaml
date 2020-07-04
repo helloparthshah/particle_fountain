@@ -1,8 +1,8 @@
 name: particle_fountain
-description: A new Flutter package project.
+description: Easily create particle fountains
 version: 0.0.1
-author: Parth Shah <helloparthshah@gmail.com>
-homepage:
+author: Parth Shah<helloparthshah@gmail.com>
+homepage: https://github.com/parthshah01/particle_fountain
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
