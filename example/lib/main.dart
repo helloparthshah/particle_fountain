@@ -6,7 +6,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   double h = 1;
+  double w = 1;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -39,17 +39,36 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Container(
             constraints: BoxConstraints.expand(),
-            child: Particles(30, h /* , 0.2 */),
+            child: ParticleFountain(
+              numberOfParticles: 30,
+              height: h,
+              width: w,
+            ),
           ),
-          Slider(
-            min: 0,
-            max: 1,
-            value: h,
-            onChanged: (height) {
-              setState(() {
-                h = height;
-              });
-            },
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Slider(
+                min: 0,
+                max: 1,
+                value: h,
+                onChanged: (height) {
+                  setState(() {
+                    h = height;
+                  });
+                },
+              ),
+              Slider(
+                min: 0,
+                max: 1,
+                value: w,
+                onChanged: (width) {
+                  setState(() {
+                    w = width;
+                  });
+                },
+              ),
+            ],
           ),
         ],
       ),

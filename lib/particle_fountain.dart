@@ -6,18 +6,19 @@ import 'package:flutter/material.dart';
 import 'package:particle_fountain/particleModel.dart';
 import 'package:simple_animations/simple_animations.dart';
 
-class Particles extends StatefulWidget {
+class ParticleFountain extends StatefulWidget {
   final int numberOfParticles;
   final double height;
   final double width;
 
-  Particles(this.numberOfParticles, this.height, [this.width]);
+  const ParticleFountain(
+      {this.numberOfParticles = 30, this.height = 1, this.width = null});
 
   @override
-  _ParticlesState createState() => _ParticlesState();
+  _ParticleFountainState createState() => _ParticleFountainState();
 }
 
-class _ParticlesState extends State<Particles> {
+class _ParticleFountainState extends State<ParticleFountain> {
   final Random random = Random();
 
   final List<ParticleModel> particles = [];
