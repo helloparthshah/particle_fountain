@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
               numberOfParticles: 30,
               height: h,
               width: w,
+              color: Colors.white,
             ),
           ),
           Column(

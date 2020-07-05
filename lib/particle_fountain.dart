@@ -10,9 +10,14 @@ class ParticleFountain extends StatefulWidget {
   final int numberOfParticles;
   final double height;
   final double width;
+  final Color color;
 
-  const ParticleFountain(
-      {this.numberOfParticles = 30, this.height = 1, this.width = null});
+  const ParticleFountain({
+    this.numberOfParticles = 30,
+    this.height = 1,
+    this.width = null,
+    this.color = Colors.white,
+  });
 
   @override
   _ParticleFountainState createState() => _ParticleFountainState();
@@ -32,7 +37,8 @@ class _ParticleFountainState extends State<ParticleFountain> {
   void generate() {
     particles.clear();
     List.generate(widget.numberOfParticles, (index) {
-      particles.add(ParticleModel(random, widget.height, widget.width));
+      particles.add(
+          ParticleModel(random, widget.height, widget.width, widget.color));
     });
   }
 
@@ -51,7 +57,7 @@ class _ParticleFountainState extends State<ParticleFountain> {
       builder: (context, time) {
         _simulateParticles(time);
         return CustomPaint(
-          painter: ParticlePainter(particles, time),
+          painter: ParticlePainter(particles, time, widget.color),
         );
       },
     );

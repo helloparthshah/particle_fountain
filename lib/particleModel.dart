@@ -10,8 +10,9 @@ class ParticleModel {
   Random random;
   double height;
   double width;
+  Color color;
 
-  ParticleModel(this.random, this.height, this.width) {
+  ParticleModel(this.random, this.height, this.width, this.color) {
     restart();
   }
 
@@ -59,12 +60,13 @@ class ParticleModel {
 class ParticlePainter extends CustomPainter {
   List<ParticleModel> particles;
   Duration time;
+  Color color;
 
-  ParticlePainter(this.particles, this.time);
+  ParticlePainter(this.particles, this.time, this.color);
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = Colors.white.withAlpha(50);
+    final paint = Paint()..color = color.withAlpha(50);
 
     particles.forEach((particle) {
       var progress = particle.animationProgress.progress(time);
