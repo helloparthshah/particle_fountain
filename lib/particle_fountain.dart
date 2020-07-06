@@ -15,7 +15,7 @@ class ParticleFountain extends StatefulWidget {
   const ParticleFountain({
     this.numberOfParticles = 30,
     this.height = 1,
-    this.width = null,
+    this.width,
     this.color = Colors.white,
   });
 

@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.red,
+      color: Colors.black,
       child: Stack(
         children: [
           Container(
@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
               numberOfParticles: 30,
               height: h,
               width: w,
-              color: Colors.white,
+              color: Colors.orange.withAlpha(150),
             ),
           ),
           Column(
