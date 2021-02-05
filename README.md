@@ -10,7 +10,7 @@ Easily create particle fountains
 
 ## Usage
 
-Add the `particle_fountain` widget as a child to the widget you want to have the particle fountain in. The `particle_fountain` widget will take the entire parent widget and the height and width of the particles can be adjusted using the `height` and `width`. 
+Add the `particle_fountain` widget as a child to the widget you want to have the particle fountain in. The `particle_fountain` widget will take the entire parent widget and the height and width of the particles can be adjusted using the `height` and `width` which signify the percentage of the height/width and range from 0 to 1. 
 
 ## Example
 
