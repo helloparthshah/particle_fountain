@@ -1,6 +1,6 @@
 # particle_fountain
 
-A new Flutter package project.
+Easily create particle fountains
 
 ## Getting Started
 
