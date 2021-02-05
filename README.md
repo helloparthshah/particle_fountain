@@ -5,7 +5,7 @@
 Easily create particle fountains
 
 <p align="center">
-  <img src="./untitled.gif" width="240">
+  <img src="https://github.com/helloparthshah/particle_fountain/blob/master/untitled.gif?raw=true" width="240">
 </p>
 
 ## Usage
