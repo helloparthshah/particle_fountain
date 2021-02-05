@@ -1,15 +1,26 @@
+[![Pub Package](https://img.shields.io/pub/v/ripple_effect.svg?color=0175C2)](https://pub.dev/packages/particle_fountain)
+[![GitHub Link](https://img.shields.io/github/last-commit/helloparthshah/particle_fountain)](https://github.com/helloparthshah/particle_fountain)
 # particle_fountain
 
 Easily create particle fountains
 
-## Getting Started
+<p align="center">
+  <img src="./untitled.gif" width="240">
+</p>
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Usage
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-# particle_fountain
+Add the `particle_fountain` widget as a child to the widget you want to have the particle fountain in. The `particle_fountain` widget will take the entire parent widget and the height and width of the particles can be adjusted using the `height` and `width`. 
+
+## Example
+
+```
+Container(
+    child: ParticleFountain(
+        numberOfParticles: 30,
+        height: h,
+        width: w,
+        color: Colors.orange.withAlpha(150),
+    ),
+),
+```
